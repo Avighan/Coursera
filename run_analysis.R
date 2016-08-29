@@ -25,7 +25,7 @@ subject_data <- rbind(subject_train, subject_test)
 # Extract only the measurements on the mean and standard deviation for each measurement
 ###############################################################################
 
-features <- read.table("features.txt")
+features <- read.table("C:/My Folder/Coursera Courses/Getting and Cleaning Data - John Hopkins Data Science Track/Week4/Assignment/UCI HAR Dataset/features.txt")
 
 # get only columns with mean() or std() in their names
 mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2])
@@ -40,7 +40,7 @@ names(x_data) <- features[mean_and_std_features, 2]
 # Use descriptive activity names to name the activities in the data set
 ###############################################################################
 
-activities <- read.table("activity_labels.txt")
+activities <- read.table("C:/My Folder/Coursera Courses/Getting and Cleaning Data - John Hopkins Data Science Track/Week4/Assignment/UCI HAR Dataset/activity_labels.txt")
 
 # update values with correct activity names
 y_data[, 1] <- activities[y_data[, 1], 2]
